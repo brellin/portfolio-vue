@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer :style="style">
     <h2>Get in touch</h2>
     <div v-for="(link, index) in links" :key="index">
       <FontAwesomeIcon
@@ -19,13 +19,19 @@ export default {
         { icon: ["fab", "github"], link: "https://github.com/brellin" },
         { icon: ["fab", "linkedin"], link: "https://linkedin.com/in/brellin" },
         { icon: "at", link: "mailto: will@willujr.com" }
-      ]
+      ],
+      style: {
+        marginTop: "-100vh"
+      }
     };
   },
   methods: {
     openWindow(link) {
       window.open(link);
     }
+  },
+  created() {
+    setTimeout(() => (this.style = {}), 1000);
   }
 };
 </script>

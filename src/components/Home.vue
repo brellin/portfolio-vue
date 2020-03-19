@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="Intro">
-      <h3>Hi, my name is</h3>
+      <h3 :style="top">Hi, my name is</h3>
 
       <h1>William Charles Umstead Junior</h1>
 
-      <h4>I'm a Full Stack Web Developer</h4>
+      <h4 :style="bottom">I'm a Full Stack Web Developer</h4>
     </div>
 
-    <div class="Skills">
+    <div class="Skills" :style="skills">
       <h2>Specializing in:</h2>
       <img
         v-for="(image, index) in images"
@@ -37,8 +37,32 @@ export default {
         "node.png",
         "mdb.png",
         "gql.png"
-      ]
+      ],
+      top: {
+        position: "relative",
+        left: "100vw"
+      },
+      bottom: {
+        position: "relative",
+        right: "100vw"
+      },
+      skills: {
+        opacity: 0
+      }
     };
+  },
+  beforeCreate() {
+    setTimeout(() => {
+      this.top = {
+        position: "relative",
+        left: "0"
+      };
+      this.bottom = {
+        position: "relative",
+        right: "0"
+      };
+      this.skills = { opacity: 1 };
+    }, 1000);
   }
 };
 </script>
@@ -56,6 +80,7 @@ div.Home {
   div.Intro {
     @include flex($direction: column);
     width: max-content;
+    position: relative;
 
     @media (max-width: 500px) {
       margin-top: 50px;

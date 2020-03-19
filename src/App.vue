@@ -30,6 +30,7 @@ body {
   color: $accent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 #app {
   @include flex(column, flex-start, center);
