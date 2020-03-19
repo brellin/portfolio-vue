@@ -7,7 +7,7 @@
 
     <h2>GitHub</h2>
     <Github
-      v-if="this.contributions"
+      v-if="Object.values(contributions).length"
       :values="contributions"
       :range-color="colorRange"
       :end-date="Date.now()"
@@ -26,17 +26,13 @@ export default {
         "#099",
         "#055",
         "#03D4FE"
-      ],
-      contributions: undefined
+      ]
     };
   },
-  async beforeMount() {
-    const { data } = await this.$http.get(
-      "https://github-calendar.now.sh/v1/brellin"
-    );
-    this.contributions = data.contributions;
-    console.log(this.contributions);
-    this.loading = false;
+  computed: {
+    contributions() {
+      return this.$root.$data.contributions;
+    }
   }
 };
 </script>
