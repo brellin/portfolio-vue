@@ -74,17 +74,14 @@ div.Home {
   user-select: none;
 
   @media (max-width: 500px) {
-    flex-direction: column;
+    @include flex(column, space-evenly, center);
   }
 
   div.Intro {
     @include flex($direction: column);
     width: max-content;
+    width: intrinsic;
     position: relative;
-
-    @media (max-width: 500px) {
-      margin-top: 50px;
-    }
 
     h1 {
       color: $dark;
@@ -93,7 +90,7 @@ div.Home {
       margin: 0;
 
       @media (max-width: 500px) {
-        font-size: 20px;
+        font-size: 2rem;
       }
     }
 
@@ -105,7 +102,7 @@ div.Home {
       transition: 1s ease-out;
 
       @media (max-width: 500px) {
-        font-size: 15px;
+        font-size: 1.5rem;
       }
     }
 
@@ -123,11 +120,11 @@ div.Home {
     @include flex($justify: flex-end);
     flex-wrap: wrap;
     max-width: 42%;
+    width: 100%;
     transition: 1.5s ease-out;
 
     @media (max-width: 500px) {
       max-width: 100%;
-      margin: 25px auto 0;
     }
 
     h2 {

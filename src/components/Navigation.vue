@@ -29,8 +29,9 @@ export default {
 <style lang="scss">
 nav {
   margin: 20px auto 0;
-  @include flex($justify: space-evenly);
+  @include flex($justify: space-around);
   position: relative;
+  max-width: 100%;
 
   a {
     font-size: 2rem;

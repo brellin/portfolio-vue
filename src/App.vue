@@ -31,9 +31,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 #app {
   @include flex(column, flex-start, center);
+  max-width: 100%;
 }
 div.Route {
   min-height: 70vh;

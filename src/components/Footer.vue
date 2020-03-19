@@ -21,7 +21,7 @@ export default {
         { icon: "at", link: "mailto: will@willujr.com" }
       ],
       style: {
-        marginTop: "-100vh"
+        marginTop: "-100%"
       }
     };
   },

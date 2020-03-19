@@ -7,7 +7,7 @@
 
     <h2>GitHub</h2>
     <Github
-      v-if="Object.values(contributions).length"
+      v-if="contributions"
       :values="contributions"
       :range-color="colorRange"
       :end-date="Date.now()"

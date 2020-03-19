@@ -60,7 +60,7 @@ const router = new Router({
 new Vue({
   router,
   data: {
-    contributions: {}
+    contributions: undefined
   },
   async beforeMount() {
     const { data } = await this.$http.get("https://github-calendar.now.sh/v1/brellin")
