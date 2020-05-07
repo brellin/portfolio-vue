@@ -2,13 +2,13 @@
   <div class="Activity">
     <h2>WakaTime</h2>
     <figure>
-      <embed src="https://wakatime.com/share/@brellin/f844d8ee-85dc-4ba1-b3e1-4277288ef657.svg" />
+      <img src="https://wakatime.com/share/@brellin/f844d8ee-85dc-4ba1-b3e1-4277288ef657.svg" />
     </figure>
 
     <h2>GitHub</h2>
     <Github
-      v-if="contributions"
-      :values="contributions"
+      v-if="this.$store.state.contributions"
+      :values="this.$store.state.contributions"
       :range-color="colorRange"
       :end-date="Date.now()"
     />
@@ -29,10 +29,9 @@ export default {
       ]
     };
   },
-  computed: {
-    contributions() {
-      return this.$root.$data.contributions;
-    }
+  mounted() {
+    if (this.$store.state.contributions === undefined)
+      this.$store.dispatch("populate");
   }
 };
 </script>

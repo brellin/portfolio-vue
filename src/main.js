@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex, { mapActions } from 'vuex'
 import Router from 'vue-router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -18,8 +19,26 @@ library.add(fab, faAt)
 
 Vue.config.productionTip = false
 
+Vue.use(Vuex)
 Vue.use(Router)
 Vue.use(VueAxios, axios)
+
+const store = new Vuex.Store({
+  state: {
+    contributions: undefined
+  },
+  actions: {
+    populate() {
+      axios
+        .get("https://github-calendar.now.sh/v1/brellin")
+        .then(res => this.state.contributions = res.data.contributions)
+        .catch(err => console.log(err))
+    }
+  },
+  mutations: {
+    ...mapActions(['populate'])
+  }
+})
 
 Vue.component('Github', CalendarHeatmap)
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
@@ -59,12 +78,6 @@ const router = new Router({
 
 new Vue({
   router,
-  data: {
-    contributions: undefined
-  },
-  async beforeMount() {
-    const { data } = await this.$http.get("https://github-calendar.now.sh/v1/brellin")
-    this.contributions = data.contributions
-  },
+  store,
   render: h => h(App),
 }).$mount('#app')
