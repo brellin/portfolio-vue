@@ -2,7 +2,7 @@
   <div class="Activity">
     <h2>WakaTime</h2>
     <figure>
-      <img src="https://wakatime.com/share/@brellin/f844d8ee-85dc-4ba1-b3e1-4277288ef657.svg" />
+      <embed src="https://wakatime.com/share/@brellin/f844d8ee-85dc-4ba1-b3e1-4277288ef657.svg" />
     </figure>
 
     <h2>GitHub</h2>
