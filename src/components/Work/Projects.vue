@@ -21,7 +21,7 @@ export default {
       projects: [
         {
           name: "Black Hole",
-          link: "https://blackhole.willujr.com",
+          link: "https://blackhole.willumstead.com",
           title: "BlackHole",
           repo: "https://github.com/black-hole-lambda-build-week/front-end",
           text: `A web app using React for the front-end and Node for the back-end. This project allows the user to vent into a “black hole” - without the worry of anybody hearing what was said.\n\nI was responsible for the front end of this project.\n\n`
@@ -35,7 +35,7 @@ export default {
         },
         {
           name: "Chao Fever",
-          link: "https://chaofever.willujr.com",
+          link: "https://chaofever.willumstead.com",
           title: "Chao",
           repo: "https://github.com/brellin/chaofever",
           text: `My first maserpiece, made at 15 years of age - 2008. Originally composed using HTML, CSS, and PHP. This iteration was refactored to use HTML and LESS.\n\nThe website is focused on a side-story of the Sonic Adventure series...Chao!\n\n`
