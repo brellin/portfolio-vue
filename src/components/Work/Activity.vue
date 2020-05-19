@@ -12,6 +12,7 @@
       :range-color="colorRange"
       :end-date="Date.now()"
     />
+    <p v-else>Loading...</p>
   </div>
 </template>
 
