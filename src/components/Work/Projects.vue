@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="project in projects" :key="project.name" :class="`Project ${project.title}`">
-      <h2>{{project.name}}</h2>
+      <h2 @click="openWindow(project.link)">{{project.name}}</h2>
       <p @click="openWindow(project.link)">
         {{project.text}}
         <a
