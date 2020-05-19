@@ -12,10 +12,10 @@
       <h2>Specializing in:</h2>
       <img
         v-for="(image, index) in images"
-        :key="image + String(index)"
-        :src="require(`${path}${image}`)"
-        :alt="image"
-        :title="image"
+        :key="image.src + String(index)"
+        :src="require(`${path}${image.src}`)"
+        :alt="image.name"
+        :title="image.name"
       />
     </div>
   </div>
@@ -27,16 +27,16 @@ export default {
     return {
       path: "./images/",
       images: [
-        "js.png",
-        "python.png",
-        "php.png",
-        "sql.png",
-        "sass.svg",
-        "hooks.png",
-        "redux.png",
-        "node.png",
-        "mdb.png",
-        "gql.png"
+        { src: "js.png", name: "JavaScript" },
+        { src: "python.png", name: "Python" },
+        { src: "sql.png", name: "SQL" },
+        { src: "sass.svg", name: "Sass" },
+        { src: "hooks.png", name: "React Hooks" },
+        { src: "redux.png", name: "Redux" },
+        { src: "node.png", name: "Node.js" },
+        { src: "mdb.png", name: "MongoDB" },
+        { src: "gql.png", name: "GraphQL" },
+        { src: "webapi.png", name: "ASP.NET Web API" }
       ],
       top: {
         position: "relative",
@@ -63,6 +63,11 @@ export default {
       };
       this.skills = { opacity: 1 };
     }, 1000);
+  },
+  methods: {
+    toText(withExt) {
+      return withExt.split(".")[0];
+    }
   }
 };
 </script>
