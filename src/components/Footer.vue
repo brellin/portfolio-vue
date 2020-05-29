@@ -18,7 +18,7 @@ export default {
       links: [
         { icon: ["fab", "github"], link: "https://github.com/brellin" },
         { icon: ["fab", "linkedin"], link: "https://linkedin.com/in/brellin" },
-        { icon: "at", link: "mailto: will@willujr.com" }
+        { icon: "at", link: "mailto: william.c.umstead@gmail.com" }
       ],
       style: {
         marginTop: "-100%"
