@@ -6,7 +6,7 @@
       v-if="this.$store.state.contributions"
       :values="this.$store.state.contributions"
       :range-color="colorRange"
-      :end-date="date"
+      :end-date="Date.now()"
     />
     <p v-else>Loading...</p>
 
@@ -25,9 +25,6 @@ export default {
     return {
       colorRange: ["#001a1a55", "#001a1a99", "#066", "#099", "#03D4FE"]
     };
-  },
-  computed: {
-    date: Date.now()
   },
   mounted() {
     if (this.$store.state.contributions === undefined)
