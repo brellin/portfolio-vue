@@ -23,7 +23,7 @@
 export default {
   data() {
     return {
-      colorRange: ["#001a1a99", "#001a1a55", "#066", "#099", "#03D4FE"]
+      colorRange: ["#001a1a55", "#001a1a99", "#066", "#099", "#03D4FE"]
     };
   },
   mounted() {
