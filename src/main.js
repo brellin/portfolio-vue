@@ -13,7 +13,7 @@ library.add(fab, faAt)
 
 Vue.config.productionTip = false
 
-Vue.component('Github', CalendarHeatmap)
+Vue.component('GitHub', CalendarHeatmap)
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
 
 new Vue({
