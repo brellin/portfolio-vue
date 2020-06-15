@@ -89,7 +89,7 @@ div.Home {
     position: relative;
 
     h1 {
-      color: $mid;
+      color: $dark;
       font-family: $header-font;
       font-size: 4rem;
       margin: 0;
@@ -101,7 +101,7 @@ div.Home {
 
     h3,
     h4 {
-      color: $dark;
+      color: $mid;
       font-size: 25px;
       padding: 0 5px;
       transition: 1s ease-out;
