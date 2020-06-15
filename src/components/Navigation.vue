@@ -35,7 +35,7 @@ nav {
 
   a {
     font-size: 2rem;
-    color: whitesmoke;
+    color: white;
     text-decoration: none;
     padding: 5px 15px;
     margin: 0 5px;

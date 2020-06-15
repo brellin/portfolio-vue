@@ -62,7 +62,7 @@ div.Activity {
   }
   h2 {
     text-shadow: none;
-    color: $mid;
+    color: $dark;
   }
 }
 </style>

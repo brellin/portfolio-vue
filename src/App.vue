@@ -27,7 +27,7 @@ html {
 body {
   margin: 0 25px;
   padding: 0;
-  background: #d5fdfd;
+  background: $light;
   font-family: $body-font;
   color: $dark;
   -webkit-font-smoothing: antialiased;

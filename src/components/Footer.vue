@@ -49,7 +49,6 @@ footer {
   }
 
   h2 {
-    font-family: $header-font;
     width: 100%;
     text-align: center;
   }
@@ -65,6 +64,7 @@ footer {
     svg.Link {
       font-size: 5rem;
       cursor: pointer;
+      color: $mid;
     }
   }
 }
