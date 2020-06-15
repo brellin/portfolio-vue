@@ -41,8 +41,8 @@ div.Work {
 
       &.router-link-active,
       &:hover {
-        color: $accent;
-        background: $dark;
+        color: $dark;
+        background: $mid;
       }
 
       @media (max-width: 500px) {
@@ -55,6 +55,7 @@ div.Work {
     font-family: $header-font;
     font-size: 3rem;
     text-shadow: 5px 5px 25px black, 5px 5px 25px black;
+    color: $accent;
   }
 }
 </style>

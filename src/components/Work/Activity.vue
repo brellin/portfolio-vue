@@ -14,7 +14,7 @@
     <p>WakaTime is a plugin for IDEs and text editors that tracks changes to the files being edited, accurate to 1 microsecond.</p>
     <p>The figure below is an accurate depiction of how much time I spend actually coding in my IDEs.</p>
     <figure>
-      <embed src="https://wakatime.com/share/@brellin/f844d8ee-85dc-4ba1-b3e1-4277288ef657.svg" />
+      <embed src="https://wakatime.com/share/@brellin/16b5b71c-f081-42d4-8031-170cd3ea1823.svg" />
     </figure>
   </div>
 </template>
@@ -53,12 +53,16 @@ div.Activity {
     margin-top: 25px;
 
     g text {
-      fill: #03d4fe !important;
+      fill: #099 !important;
     }
 
     @media (max-width: 500px) {
       width: 100%;
     }
+  }
+  h2 {
+    text-shadow: none;
+    color: $mid;
   }
 }
 </style>

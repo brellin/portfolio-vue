@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Nav />
+    <div class="nav">
+      <Nav />
+    </div>
     <router-view :class="`Route ${$route.name}`" />
     <Footer />
   </div>
@@ -18,16 +20,16 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 html {
   font-size: 67.5%;
 }
 body {
   margin: 0 25px;
   padding: 0;
-  background: linear-gradient($mid, $dark) fixed;
+  background: #d5fdfd;
   font-family: $body-font;
-  color: $accent;
+  color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -36,9 +38,21 @@ body {
 #app {
   @include flex(column, flex-start, center);
   max-width: 100%;
-}
-div.Route {
-  min-height: 70vh;
-  width: 100%;
+
+  div.Route {
+    margin-top: 75px;
+    min-height: 65vh;
+    width: 100%;
+  }
+
+  div.nav {
+    @include flex(row, center, center);
+    width: 100%;
+    min-height: 50px;
+    height: 10%;
+    position: fixed;
+    background: linear-gradient($mid 90%, 95%, transparent 100%);
+    z-index: 5;
+  }
 }
 </style>

@@ -89,7 +89,7 @@ div.Home {
     position: relative;
 
     h1 {
-      color: $dark;
+      color: $mid;
       font-family: $header-font;
       font-size: 4rem;
       margin: 0;
@@ -101,7 +101,7 @@ div.Home {
 
     h3,
     h4 {
-      color: $accent;
+      color: $dark;
       font-size: 25px;
       padding: 0 5px;
       transition: 1s ease-out;
@@ -112,11 +112,11 @@ div.Home {
     }
 
     h3 {
-      border-bottom: 1px solid #001a1a;
+      border-bottom: 1px solid $mid;
     }
 
     h4 {
-      border-top: 1px solid #001a1a;
+      border-top: 1px solid $mid;
       align-self: flex-end;
     }
   }
