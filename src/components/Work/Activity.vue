@@ -1,6 +1,6 @@
 <template>
   <div class="Activity">
-    <h2 class="NoShadow">GitHub</h2>
+    <h2>GitHub</h2>
     <p>Below is a graph depicting the number of contributions I have made to projects that have been featured on the master branch of its respective repository.</p>
     <GitHub
       v-if="this.$store.state.contributions"
@@ -10,7 +10,7 @@
     />
     <p v-else>Loading...</p>
 
-    <h2 class="NoShadow">WakaTime</h2>
+    <h2>WakaTime</h2>
     <p>WakaTime is a plugin for IDEs and text editors that tracks changes to the files being edited, accurate to 1 microsecond.</p>
     <p>The figure below is an accurate depiction of how much time I spend actually coding in my IDEs.</p>
     <figure>
@@ -37,9 +37,8 @@ export default {
 div.Activity {
   width: 100%;
   @include flex(column, flex-start, center);
-  h2.NoShadow {
-    text-shadow: none;
-    color: $dark;
+  h2 {
+    -webkit-text-stroke: 1px $mid;
   }
   p {
     font-size: 1.5rem;

@@ -54,8 +54,8 @@ div.Work {
   h2 {
     font-family: $header-font;
     font-size: 3rem;
-    text-shadow: 5px 5px 25px black, 5px 5px 25px black;
     color: $accent;
+    -webkit-text-stroke: 1px $mid;
   }
 }
 </style>
