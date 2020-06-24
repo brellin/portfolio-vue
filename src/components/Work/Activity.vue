@@ -37,6 +37,10 @@ export default {
 div.Activity {
   width: 100%;
   @include flex(column, flex-start, center);
+  h2 {
+    text-shadow: none;
+    color: $dark;
+  }
   p {
     font-size: 1.5rem;
     margin: 5px;
@@ -59,10 +63,6 @@ div.Activity {
     @media (max-width: 500px) {
       width: 100%;
     }
-  }
-  h2 {
-    text-shadow: none;
-    color: $dark;
   }
 }
 </style>
