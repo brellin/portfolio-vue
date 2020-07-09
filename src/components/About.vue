@@ -60,22 +60,22 @@ div.About {
     font-size: 2rem;
 
     a {
-      color: whitesmoke;
+      color: $mid;
       text-decoration: none;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
-        height: 1px;
+        height: 2px;
         width: 100%;
-        transform: translate(-400%, 22px);
+        transform: translate(-40vw, 22px);
         transition: 0.3s ease;
       }
 
       &:hover {
         &::before {
-          background: whitesmoke;
+          background: $mid;
           transform: translateY(22px);
         }
       }
